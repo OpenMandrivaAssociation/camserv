@@ -16,7 +16,7 @@ Group: System/Kernel and hardware
 Url: http://cserv.sourceforge.net/
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 BuildRequires: jpeg-devel imlib2-devel gdk-pixbuf-devel
-BuildRequires: automake1.7 autoconf2.5
+BuildRequires: automake1.7 autoconf
 
 %description
 Camserv is a streaming web video server. It provides functionality for
@@ -33,7 +33,7 @@ relay support.
 pushd libltdl
   rm -f configure
   aclocal-1.7 -I ../macros
-  autoconf-2.5x
+  autoconf
   automake-1.7
 popd
 
