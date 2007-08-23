@@ -1,6 +1,6 @@
 %define name camserv
 %define version 0.5.1
-%define release %mkrel 1
+%define release %mkrel 2
 
 Summary: A streaming web video server
 Name: %{name}
