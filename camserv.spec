@@ -14,7 +14,7 @@ Patch2: camserv-0.5.1-config.patch.bz2
 License: GPL
 Group: System/Kernel and hardware
 Url: http://cserv.sourceforge.net/
-BuildRequires: jpeg-devel imlib2-devel gdk-pixbuf-devel
+BuildRequires: jpeg-devel imlib2-devel gdk-pixbuf-devel libltdl-devel
 BuildRequires: automake1.7 autoconf
 
 %description
