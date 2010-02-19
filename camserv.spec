@@ -7,16 +7,15 @@ Name: %{name}
 Version: %{version}
 Release: %{release}
 Source0: http://prdownloads.sourceforge.net/cserv/%{name}-%{version}.tar.bz2
-Patch0: camserv-0.5.1-errno.patch.bz2
+Patch0: camserv-0.5.1-errno.patch
 # Patch1 and Patch2 based on Thomas Vander Stichele's Fedora package
-Patch1: camserv-0.5.1-gdk-pixbuf.patch.bz2
-Patch2: camserv-0.5.1-config.patch.bz2
+Patch1: camserv-0.5.1-gdk-pixbuf.patch
+Patch2: camserv-0.5.1-config.patch
 License: GPL
 Group: System/Kernel and hardware
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 Url: http://cserv.sourceforge.net/
-BuildRequires: jpeg-devel imlib2-devel gdk-pixbuf-devel libltdl-devel
-BuildRequires: automake1.7 autoconf
+BuildRequires: jpeg-devel imlib2-devel
 
 %description
 Camserv is a streaming web video server. It provides functionality for
@@ -28,17 +27,9 @@ relay support.
 %patch0 -p1 -b .errno
 %patch1 -p1 -b .gdk-pixbuf
 %patch2 -p1 -b .config
-# regenerate libltdl configure
-# because old configure 2.13 doesn't support topdir's configure arguments
-pushd libltdl
-  rm -f configure
-  aclocal-1.7 -I ../macros
-  autoconf
-  automake-1.7
-popd
 
 %build
-(cd libltdl; %configure2_5x)
+autoreconf -fi
 %configure2_5x
 %make
 
