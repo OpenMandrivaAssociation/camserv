@@ -1,0 +1,12 @@
+Index: camserv-0.5.1/configure.in
+--- camserv-0.5.1~configure/configure.in	2002-05-12 20:06:12.000000000 +0200
++++ camserv-0.5.1/configure.in	2004-04-08 18:42:17.000000000 +0200
+@@ -55,7 +55,7 @@
+ if test "$GDKPIXBUF_CONFIG"x != "x"; then
+ 	GDKPIXBUF_VERSION=`$GDKPIXBUF_CONFIG --version`
+ 	case "$GDKPIXBUF_VERSION" in
+-	    0.14.*) have_gdkpixbuf=yes
++	    0.14.*|0.22.*) have_gdkpixbuf=yes
+ 		 GDKPIXBUF_CFLAGS=`$GDKPIXBUF_CONFIG --cflags`
+ 		 GDKPIXBUF_LIBS=`$GDKPIXBUF_CONFIG --libs`
+ 		 CFLAGS="$CFLAGS $GDKPIXBUF_CFLAGS"

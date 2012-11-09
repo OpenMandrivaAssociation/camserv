@@ -1,0 +1,40 @@
+--- camserv-0.5.1/camserv/camserv.c.errno	2002-05-12 20:05:55.000000000 +0200
++++ camserv-0.5.1/camserv/camserv.c	2005-11-12 22:07:26.000000000 +0100
+@@ -25,6 +25,7 @@
+ #include <stdarg.h>
+ #include <signal.h>
+ #include <sys/param.h>
++#include <errno.h>
+ 
+ #include "camconfig.h"
+ #include "camshm.h"
+--- camserv-0.5.1/camserv/main_loop.c.errno	2002-09-16 00:05:23.000000000 +0200
++++ camserv-0.5.1/camserv/main_loop.c	2005-11-12 22:07:26.000000000 +0100
+@@ -3,6 +3,7 @@
+ #include <string.h>
+ #include <stdarg.h>
+ #include <signal.h>
++#include <errno.h>
+ 
+ #include "camserv.h"
+ #include "camconfig.h"
+--- camserv-0.5.1/camserv/picture_loop.c.errno	2002-03-11 01:51:44.000000000 +0100
++++ camserv-0.5.1/camserv/picture_loop.c	2005-11-12 22:07:26.000000000 +0100
+@@ -4,6 +4,7 @@
+ #include <dlfcn.h>
+ #include <sys/types.h>
+ #include <signal.h>
++#include <errno.h>
+ 
+ #include "camserv.h"
+ #include "camconfig.h"
+--- camserv-0.5.1/relay/relay.c.errno	2002-09-16 00:13:16.000000000 +0200
++++ camserv-0.5.1/relay/relay.c	2005-11-12 22:08:30.000000000 +0100
+@@ -22,6 +22,7 @@
+ #include <stdlib.h>
+ #include <string.h>
+ #include <signal.h>
++#include <errno.h>
+ 
+ #include "databuf.h"
+ #include "socket.h"
