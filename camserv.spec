@@ -14,7 +14,7 @@ Patch2: camserv-0.5.1-config.patch
 License: GPL
 Group: System/Kernel and hardware
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
-Url: http://cserv.sourceforge.net/
+Url: https://cserv.sourceforge.net/
 BuildRequires: jpeg-devel imlib2-devel
 
 %description
